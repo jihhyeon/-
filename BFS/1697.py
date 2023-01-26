@@ -2,7 +2,7 @@ from collections import deque
 
 n, k = map(int, input().split())
 max = 100000
-visited = [0]*(max +1)
+visited = [0]*(max +1)#방문횟수 표시해주는 리스트 만들기
 
 def bfs():
     q = deque()

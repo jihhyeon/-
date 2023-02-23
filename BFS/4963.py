@@ -47,7 +47,7 @@ while True:
     graph = []
     cnt = 0
     if w == 0 and h == 0:
-        break
+        break#0,0이면 while 문 종료
     #h줄 만큼 입력받기
     for _ in range(h):
         graph.append(list(map(int, input().split())))

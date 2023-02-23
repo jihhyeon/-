@@ -14,7 +14,7 @@ def dfs(x,y,cnt):
         nx = x+dx[i]
         ny = y+dy[i]
         if nx < 0 or nx >=N or ny < 0 or ny >= M:
-            continue
+            continue#해당 경우인 경우 무시하고 진행
         if graph[nx][ny] == 0:
             cnt = dfs(nx,ny,cnt+1)
     return cnt

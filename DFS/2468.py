@@ -29,14 +29,14 @@ def dfs(x, y, h):
 
 
 for h in range(101):
-    _cnt = 0
+    _cnt = 0#초기화해주기
     visited = [[0]*n for _ in range(n)]#방문전
     for i in range(n):
         for j in range(n):
             if graph[i][j]>h and visited[i][j] == 0:
                 dfs(i,j,h)
                 _cnt += 1
-    cnt = max(cnt, _cnt)
+    cnt = max(cnt, _cnt)#cnt 재설정
 print(cnt)
 
 

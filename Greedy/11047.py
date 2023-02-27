@@ -18,7 +18,7 @@ print(cnt)'''
 n, k = map(int, input().split())
 kind = list(map(int, input().split()))
 kind.sort(reverse = True)#큰값부터 역순으로 정렬
-print(kind)
+# print(kind)
 cnt = 0
 
 for i in kind:
@@ -26,4 +26,5 @@ for i in kind:
         break
     cnt += k//i #몫이 개수
     k %= i#나머지는 k값으로!
+    print(i, cnt, k)
 print(cnt)

@@ -11,9 +11,9 @@ dx, dy = [0, 0, -1, 1], [-1, 1, 0, 0]
 
 def solution(maps):
     def island(i, j):
-        visit[i][j] = 1
+        visit[i][j] = 1#방문처리
         q = deque()
-        q.append([i, j])
+        q.append([i, j])#큐에 삽입
         days = 0
         while q:
             i, j = q.popleft()
@@ -22,8 +22,8 @@ def solution(maps):
                 x, y = i + dx[d], j + dy[d]
                 if not(0 <= x < n and 0 <= y < m): continue
                 if visit[x][y] == 0 and maps[x][y] != 'X':
-                    q.append([x, y])
-                    visit[x][y] = 1
+                    q.append([x, y])#큐에 삽입
+                    visit[x][y] = 1#방문처리
         return days
 
     answer = []
@@ -35,7 +35,7 @@ def solution(maps):
     
     for i in range(n):
         for j in range(m):
-            if maps[i][j] != 'X' and visit[i][j] == 0:
+            if maps[i][j] != 'X' and visit[i][j] == 0:#'x'가 아니고 아직 방문하지 않았을 때
                 answer.append(island(i, j))
     if answer:
         return sorted(answer)

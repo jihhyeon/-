@@ -23,6 +23,7 @@ dy = [1,-1,0,0]
 def bfs():
     queue = deque()
     #queue에 2의 위치 전부 append
+    print(lab_map)
     test_map = copy.deepcopy(lab_map)
     for i in range(n):
         for j in range(m):
@@ -58,7 +59,8 @@ def make_wall(count):
             if lab_map[i][j] == 0:
                 lab_map[i][j] = 1
                 make_wall(count + 1)
-                lab_map[i][j] = 0#다시 0으로 돌려주기
+                lab_map[i][j] = 0#count == 3, bfs 돌린 후!! 다시 0으로 돌려주기
+
 
 n, m = map(int,input().split())
 

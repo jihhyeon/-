@@ -3,7 +3,7 @@
 #상하좌우가 x가 아니면 장애물 설치
 #장애물은 정확히 3개 설치해야함
 #벽을 설치할 수 있는 모든 경우를 찾는 함수 / 선생의 위치에서 상하좌우로 학생이 있는지 확인하는 함수
-n = int(input())
+"""n = int(input())
 graph = []
 teacher = 0
 for _ in range(n):
@@ -53,4 +53,55 @@ solution(0)
 if answer:
     print('yes')
 else:
-    print('no')
+    print('no')"""
+import copy
+from collections import deque
+n = int(input())
+graph = [
+    ['x','s','x','x','t'],
+    ['t','x','s','x','x'],
+    ['x','x','x','x','x'],
+    ['x','t','x','x','x'],
+    ['x','x','t','x','x']
+]
+dx = [0,0,-1,1]
+dy = [-1,1,0,0]
+
+def check_s(x,y):
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        if 0<=nx<n and 0<=ny<n and graph[i][j] != 'o':
+            #학생이면 감시 가능함
+            if graph[i][j] == 's':
+                return True
+            #t나 x면 계속 탐색
+            else:
+                nx += dx[i]
+                ny += dy[i]
+    #감시 불가능하다
+    return True
+
+def make_obstacle(count):
+    global answer
+    if count == 3:
+        cnt = 0
+        for i in range(n):
+            for j in range(n):
+                if graph[i][j] == 't':
+                    if not check_s(i,j):
+                        cnt += 1
+        if cnt == teacher:
+            answer = True
+        return
+
+    for i in range(n):
+        for j in range(n):
+            if graph[i][j] == 'x':
+                graph[i][j] = 'o'
+                make_obstacle(count + 1)
+                graph[i][j] = 'x'
+                count -= 1
+
+print(make_obstacle(0))
+

@@ -4,15 +4,12 @@
 """
 import sys
 input = sys.stdin.readline
-# n = int(input())
-# t, p = [], []
-# for i in range(n):
-#     x, y = map(int, input().split())
-#     t.append(x)
-#     p.append(y)
-n = 7
-t = [3,5,1,1,2,4,2]
-p = [10,20,10,20,15,40,200]
+n = int(input())
+t, p = [], []
+for i in range(n):
+    x, y = map(int, input().split())
+    t.append(x)
+    p.append(y)
 
 #dp[i] = i번째 날부터 마지막 날까지 낼 수 있는 최대 이익
 dp = [0] * (n+1)

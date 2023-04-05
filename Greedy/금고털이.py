@@ -17,3 +17,4 @@ for m, p in price:
         break
 
 print(result)
+

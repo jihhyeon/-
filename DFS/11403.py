@@ -9,7 +9,7 @@ for _ in range(n):
 for k in range(n):
     for i in range(n):
         for j in range(n):
-            print
+            print(k,i,j)
             if graph[i][j] == 1 or (graph[i][k] == 1 and graph[k][j] == 1):
                 graph[i][j] = 1
 

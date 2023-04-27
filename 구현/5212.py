@@ -48,7 +48,7 @@ y_a, y_b = min(b), max(b)
 for i in range(h_a,h_b+1):
     for j in range(y_a,y_b+1):
         print(new[i][j], end = '')
-    print()
+    print()#줄바꿈
 
 
         

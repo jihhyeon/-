@@ -16,7 +16,7 @@ def dnc(x, y, n):
         dnc(x, y, n)  # 오른쪽 위
         dnc(x, y + n, n)  # 왼쪽 위
         dnc(x + n, y, n)  # 오른쪽 아래
-        dnc(x + n, y + n, n)  # 왼쪽 아래
+        dnc(x + n, y + n, n)  # 왼쪽 아     래
         print(")", end='')
 
     elif check == 1:

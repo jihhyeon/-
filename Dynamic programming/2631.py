@@ -4,7 +4,6 @@ num = [0]
 for i in range(n):
     num.append(int(input()))
 dp = [1]*(n+1) #i번째까지 증가했을 때 수열의 최대 길이
-print(num, dp)
 
 #i = 현재값, j = 이전값들(0~i-1)
 for i in range(1,n+1):

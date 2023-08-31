@@ -14,6 +14,7 @@ def solv():
     answer_c = 9875643210
     answer = None
     for cnt in range(1, n+1):
+        #1~n까지의 숫자를 cnt개의 조합으로 만든것 = comb
         for comb in combinations(range(1,n+1), cnt):
             tp = tf = ts = tv = tc = 0
             for target in comb:

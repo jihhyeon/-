@@ -30,6 +30,6 @@ def bfs():
                     que.append([nx,ny])
                     # 검은 방이면 이전 visited에서 1 더해서 초기화
                     visited[nx][ny] = visited[x][y] + 1
-                print(visited)
+                # print(visited)
 
 print(bfs())

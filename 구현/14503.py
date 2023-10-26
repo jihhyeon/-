@@ -2,7 +2,7 @@
 # input = sys.stdin.readline
 # n, m = map(int, input().split())
 # r, c, d = map(int, input().split())
-# graph = [list(map(int, input().split())) for _ in range(n)]
+graph = [list(map(int, input().split())) for _ in range(n)]
 # ## 북, 동, 하, 서 ( 시계방향 )
 # dx = [-1, 0, 1, 0]
 # dy = [0, 1, 0, -1]

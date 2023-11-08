@@ -66,8 +66,7 @@ def bfs2(z):
                     print(dist)
                     q.append([nx, ny])
 answer = sys.maxsize
-# for i in range(1, count_island):
-#     bfs2(i)
-bfs2(1)
+for i in range(1, count_island):
+    bfs2(i)
 print(answer)
 

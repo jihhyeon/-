@@ -9,6 +9,7 @@ for _ in range(T):
     for _ in range(N-1):
         p,c=map(int,sys.stdin.readline().split())
         p_list[c]=p
+    print(p_list)
 
     a, b = map(int, sys.stdin.readline().split())
     a_parent = [a]

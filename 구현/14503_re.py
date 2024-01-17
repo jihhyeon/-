@@ -24,9 +24,12 @@ while True:
                 cnt += 1
                 r, c = nr, nc
                 flag = 1
+                print('flag', flag)
                 break
+    print('no')
     # 네 방향 모두 청소할 수 없을 때
     if flag == 0:
+        print('flagno')
         if graph[r-dx[d]][c-dy[d]] == 1: # 후진했는데 벽일 경우
             print(cnt)
             break

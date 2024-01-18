@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 n,m,r = map(int, input().split())
 graph = [[] for _ in range(n+1)]
-visited = [False] * (n+1)
+visited = [False for _ in range(n+1)]
 for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
@@ -21,11 +21,11 @@ cnt = 1
 numdict[r] = 1
 
 def dfs(x):
-    global cnt
+    global visited, graph, cnt
     visited[x] = True
-    cnt += 1
     for i in graph[x]:
         if visited[i] == False:
+            cnt += 1
             numdict[i] = cnt
             dfs(i)
 

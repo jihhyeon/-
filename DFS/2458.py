@@ -39,7 +39,7 @@ for i in range(1,n+1):
     tall(i)
     hei_dic[i][0], hei_dic[i][1] = s, t
     
-# 3. 작은키 수 + 큰키 수 = 전체학생 - 1(본인) 이면 알 수 있는 학생임
+# 3. 작은키 수 + 큰키 수 = n - 1(본인) 이면 알 수 있는 학생임
 for i in range(1,n+1):
     if (hei_dic[i][0] + hei_dic[i][1]) == n - 1:
         ans += 1

@@ -20,7 +20,7 @@ def dfs(x, y):
         ny = y + dy[i]
         if 0 <= nx < n and 0 <= ny < n:
             if forest[x][y] < forest[nx][ny]: # 이동할 곳에 대나무가 더 많다면
-                check[x][y] = max(check[x][y], dfs(nx,ny) + 1)
+                check[x][y] = max(check[x][y], dfs(nx,ny) + 1) # nx,ny 좌표의 dp + 현재칸
     return check[x][y]
 
 for i in range(n):

@@ -48,7 +48,6 @@ def dfs(depth, board):
     cctv_num, x, y = cctv[depth] # 탐색할 cctv
     # cctv 방향에 따라서
     for i in mode[cctv_num]:
-        print(i, x, y)
         fill(temp, i, x, y) # 보드, cctv방향, 좌표
         dfs(depth + 1, temp) # 재귀호출
         temp = copy.deepcopy(board) # 보드 초기화

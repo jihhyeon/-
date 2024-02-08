@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 n = int(input())
 grid = [list(map(str, input().split())) for _ in range(n)]
+# 최대값 dp와 최소값 dp를 나눠서 구하기
 max_dp = [[-1e9 for _ in range(n)] for _ in range(n)]
 min_dp = [[1e9 for _ in range(n)] for _ in range(n)]
 max_dp[0][0] = int(grid[0][0])
